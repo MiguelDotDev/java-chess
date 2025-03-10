@@ -17,6 +17,8 @@ La clase principal es `Partida.java`, la cual inicializa el tablero usando una i
 
 Posteriormente, se crean dos instancias de `Jugador` (para piezas blancas y negras) y se generan objetos para cada una de las 32 piezas del juego, asignándoles sus coordenadas iniciales y asociándolas a cada jugador mediante el método `setPieza`.
 
+## Tecnologías Usadas
+Se desarollo en Java y `NetBeans` como IDE
 
 ## Las Piezas
 Para la gestión de piezas, se creó una clase general llamada `Pieza`, de la cual heredan todas las demás. Esta clase contiene los atributos y métodos fundamentales para el funcionamiento de las piezas de ajedrez.
@@ -24,26 +26,22 @@ Para la gestión de piezas, se creó una clase general llamada `Pieza`, de la cu
 ### **Atributos**
 - Coordenadas en el tablero `(X, Y)`.
 - Valor (pensado para futuros modos de juego que involucren puntuaciones).
-- Estado **"Viva"** (determina si la pieza sigue activa en el tablero).
+- Estado "Viva" (determina si la pieza sigue activa en el tablero).
 - Casilla actual (utilizada para calcular movimientos y capturas de piezas).
 - Color de la pieza.
 - Ruta del ícono (imagen o sprite de la pieza en el proyecto).
 
 ### **Métodos**
-- **`piezaEnTrayectoria`**  
-  *Método abstracto* que recibe una pieza como parámetro y devuelve `true` o `false` dependiendo de si la pieza se encuentra en su trayectoria.  
-  Considera si hay piezas bloqueando el camino (retorna `false` en ese caso). No aplica para el **Caballo**, ya que este puede saltar piezas.
+- `piezaEnTrayectoria`
 
-- **`movimiento`**  
-  *Método abstracto* que evalúa si las coordenadas de destino `(X, Y)` son válidas con base en las reglas del Ajedrez.  
-  Compara las coordenadas actuales con las de destino y llama a `piezaEnTrayectoria` para verificar si hay bloqueos.  
-  Algunas piezas tienen reglas especiales, como:
-  - **Peón**: Puede moverse dos casillas en su primer turno, pero no puede retroceder.  
-  - **Caballo**: Puede saltar otras piezas.  
+   ***Método abstracto** que solicita un objeto de tipo **pieza como parámetro**, y devuelve un **true** o un **false** si la pieza se encuentra en la **trayectoria** con la que da el parámetro de entrada. El método considera si hay piezas bloqueando la trayectoria (Regresa **False**), aunque no afecta en el caso de un Caballo si hay piezas intermedias.*  
 
-- **`comerPiezas`**  
-  Verifica si la casilla de destino contiene una pieza enemiga. Retorna `true` si la captura es válida o `false` si no lo es.  
-  Este método se usa dentro de `movimiento`, con reglas específicas para cada tipo de pieza.
+- `movimiento`
+
+   ***Método Abstracto** que **calcula** comparando las **coordenadas** a las que te quieres mover (X, Y en parámetros del método), con las **coordenadas** actuales de la pieza (Atributos CoordenadaX, CoordenadaY) para saber si el movimiento que se quiere hacer **es o no válido** para la pieza actual, basándose en las reglas del Ajedrez que nos dicen cómo se puede mover cada pieza. Este método usa ```piezaEnTrayectoria``` para saber si hay una pieza bloqueando el movimiento. Ciertas piezas tienen reglas extras, como por ejemplo, **El Peón** (su primer movimiento puede ser doble y no puede retroceder casillas), o **El Caballo**, que puede saltar piezas, etc. Todas las consideraciones del movimiento se manejan con este método.*  
+
+- `comerPiezas`  
+   *Este método verifica si una casilla a la que te quieres mover está ocupada por una pieza enemiga (validando que puedes "Comer" o "Eliminar" dicha pieza). Regresa **True** si se permite comer o **False** si no. El método se utiliza dentro de* ```movimiento``` *y cada pieza lo aplica con sus propias reglas.*  
 
 
 
