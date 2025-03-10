@@ -10,8 +10,8 @@ public class Partida {
     private static boolean TurnoBlancas = true;
 
     // Inicio Declaracion De Jugadores ===========================
-    public static Jugador JugadorW = new Jugador(true);
-    public static Jugador JugadorB = new Jugador(false);
+    public static Jugador JugadorW = new Jugador(true); //Blanco
+    public static Jugador JugadorB = new Jugador(false); //Negro
     // Fin Declaracion De Jugadores ==============================
 
     public static boolean isEnJugada() {

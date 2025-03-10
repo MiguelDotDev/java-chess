@@ -102,8 +102,9 @@ public class Tablero extends javax.swing.JFrame {
         }
     }
 
+    //FUNCION DE JAQUE INCOMPLETA
     public boolean Jaque(Pieza rey) {
-        Jugador a;
+        /*Jugador a;
         boolean siHayJaque = false;
 
         if (rey.isBlanca()) {
@@ -115,10 +116,10 @@ public class Tablero extends javax.swing.JFrame {
         for (int i = 0; i <= 14; i++) {
             siHayJaque = siHayJaque || a.getPieza(i).piezaEnTrayectoria(rey);
         }
-        System.out.println("COLOR " + rey.isBlanca());
+        System.out.println(rey.isBlanca()?"Blancas":"Negras"+" en Jaque");
         System.out.println("JAQUE " + siHayJaque);
-        return siHayJaque;
-
+        return siHayJaque;*/
+        return false;
     }
 
     @SuppressWarnings("unchecked")

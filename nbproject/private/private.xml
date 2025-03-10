@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Tablero.java</file>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Partida.java</file>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Peon.java</file>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Alfil.java</file>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Pieza.java</file>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Reina.java</file>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Rey.java</file>
+            <file>file:/home/miguel/Documentos/test/java-chess/src/ajedrez/Torre.java</file>
+        </group>
     </open-files>
 </project-private>
